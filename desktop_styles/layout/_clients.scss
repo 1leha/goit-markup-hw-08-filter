@@ -1,0 +1,27 @@
+/* Стили для секции Клиенты */
+.clients {
+  @include flexAlign();
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  @include flexAlign();
+
+  width: 170px;
+  height: 92px;
+
+  color: var(--color-inactive-icon);
+  border: 1px solid var(--color-inactive-icon);
+  border-radius: 4px;
+
+  @include projTransitions((color, border));
+
+  &:hover,
+  &:focus {
+    color: var(--color-active);
+    border: 1px solid var(--color-active);
+  }
+}

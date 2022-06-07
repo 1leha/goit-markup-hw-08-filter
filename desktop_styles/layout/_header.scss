@@ -1,0 +1,66 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+  @include flexAlign();
+}
+
+.header__item {
+  @include flexAlign();
+}
+
+.navigation {
+  @include flexAlign();
+}
+
+.header__header-contacts {
+  @include flexAlign();
+}
+
+.header__logo {
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* *Стили для меню */
+.header__menu {
+  margin-left: 93px;
+}
+
+/* *Стили для контактов */
+.header-contacts {
+  margin-left: auto;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-contacts__link {
+  @include flexAlign($align: center);
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: var(--color-secondary);
+
+  @include projTransitions(color);
+
+  /* События контактов */
+  &:hover,
+  &:focus {
+    color: var(--color-active);
+  }
+}
+
+.header-contacts__icon {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}

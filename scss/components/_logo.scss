@@ -1,0 +1,13 @@
+/* *Стили для логотипа */
+.logo {
+  display: block;
+
+  font-family: var(--secondary-font);
+  @include font(26, 36, 700, 0.03);
+
+  color: var(--color-primary);
+}
+
+.logo__color-part {
+  color: var(--color-brand);
+}

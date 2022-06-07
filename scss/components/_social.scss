@@ -1,0 +1,27 @@
+.social {
+  @include flexAlign();
+}
+
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__link {
+  @include flexAlign();
+
+  width: 44px;
+  height: 44px;
+
+  background-color: transparent;
+  color: var(--color-inactive-icon);
+
+  border-radius: 50%;
+
+  @include projTransitions((background, color));
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-active);
+    color: var(--color-white);
+  }
+}

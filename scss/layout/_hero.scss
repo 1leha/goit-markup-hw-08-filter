@@ -1,0 +1,83 @@
+/* *Стили для Героя */
+.hero {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  text-align: center;
+
+  background-color: var(--color-fourth);
+  background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+    url('../img/hero-bg-mobile.jpg');
+  background-position: center, center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include pixelRatio {
+    background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+      url('../img/hero-bg-mobile@2x.jpg');
+  }
+
+  @include tablet {
+    background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+      url('../img/hero-bg-tablet.jpg');
+
+    @include pixelRatio {
+      background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+        url('../img/hero-bg-tablet@2x.jpg');
+    }
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+      url('../img/hero-bg-desktop.jpg');
+
+    @include pixelRatio {
+      background-image: linear-gradient(to bottom, var(--color-overlay), var(--color-overlay)),
+        url('../img/hero-bg-desktop@2x.jpg');
+    }
+  }
+}
+
+.hero__title {
+  margin-bottom: 30px;
+
+  // font-weight: 900;
+  @include font(26, 42, 900, 0.06);
+
+  text-align: center;
+  // letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--color-white);
+
+  @include desktop {
+    @include font(44, 60, none, none);
+  }
+}
+
+.hero__button {
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  background-color: var(--color-brand);
+  color: var(--color-white);
+
+  @include projTransitions((color, background));
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-active-button);
+    color: var(--color-white);
+  }
+}

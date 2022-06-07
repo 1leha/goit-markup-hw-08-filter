@@ -1,0 +1,43 @@
+/* Глобальные стили страницы */
+body {
+  font-family: var(--primary-font);
+
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+button {
+  border: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;;
+}
+
+/* Обнуляет подчеркивание ссылок */
+a {
+  text-decoration: none;
+}
+
+/* Обнуляет оформления списков */
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;}
+
+/* Обнуляет оформления заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;}

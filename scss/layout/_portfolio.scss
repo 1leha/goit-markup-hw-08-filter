@@ -1,0 +1,56 @@
+/* *Стили для Портфолио
+ */
+.portfolio__filter {
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio {
+  @include tablet {
+    @include flexAlign(flex, none, none);
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+
+  @include desktop {
+    @include flexAlign(flex, none, none);
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+}
+
+.portfolio__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    align-items: stretch;
+
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  background-color: var(--color-white);
+}

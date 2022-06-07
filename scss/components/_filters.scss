@@ -1,0 +1,41 @@
+.filter {
+  @include flexAlign($justify: flex-start);
+  flex-wrap: wrap;
+  margin-top: -15px;
+
+  @include tablet {
+    @include flexAlign();
+    flex-wrap: nowrap;
+    margin-top: 0;
+  }
+}
+
+// buttons-list {
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.filter__item {
+  margin-top: 15px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.filter-label__radio-custom {
+  display: block;
+
+  height: 38px;
+  padding: 6px 22px;
+
+  @include projTransitions((color, background-color));
+
+  .filter-label__radio-original:checked + & {
+    color: var(--color-white);
+    background-color: var(--color-active);
+    box-shadow: var(--button-shadow);
+  }
+}

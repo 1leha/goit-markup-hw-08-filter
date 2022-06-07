@@ -1,0 +1,154 @@
+.form {
+  text-align: center;
+}
+
+.form__title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.form__field {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+
+  position: relative;
+}
+
+.form__textarea {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  margin-bottom: 4px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: var(--color-secondary);
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding-left: 42px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 12px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  border: none;
+  outline: 1px solid var(--color-input-outline);
+  border-radius: 4px;
+
+  @include projTransitions(outline);
+
+  &:focus {
+    outline: 1px solid var(--color-active);
+  }
+}
+
+.input-textarea {
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+
+  resize: none;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form__icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  @include projTransitions(color);
+
+  pointer-events: none;
+
+  .form__input:focus + & {
+    color: var(--color-active);
+  }
+}
+
+.checkbox {
+  @include flexAlign();
+
+  margin-bottom: 30px;
+}
+
+.checkbox__label {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  color: var(--color-secondary);
+}
+
+.checkbox__link {
+  height: 100%;
+  padding: auto;
+
+  text-decoration: none;
+
+  color: var(--color-active);
+  text-decoration: underline;
+}
+
+.checkbox__custom {
+  cursor: pointer;
+
+  display: inline-block;
+  margin-right: 8px;
+
+  border: 2px solid var(--color-primary);
+  color: var(--color-white);
+  background-color: var(--color-white);
+  border-radius: 2px;
+  background-origin: border-box;
+
+  @include projTransitions((background-color, border, color));
+
+  .checkbox__original:checked + & {
+    color: var(--color-white);
+    background-color: var(--color-brand);
+    border: 2px solid var(--color-brand);
+  }
+}
+
+.form__button-send {
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  color: var(--color-white);
+  background-color: var(--color-brand);
+  box-shadow: var(--button-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-active-button);
+  }
+}

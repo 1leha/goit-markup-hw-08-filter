@@ -1,0 +1,38 @@
+// @import './colors';
+
+:root {
+  /* Переменные основных цветов */
+  --color-brand: #2196f3;
+  --color-primary: #212121;
+  --color-secondary: #757575;
+  --color-third: #f5f4fa;
+  --color-fourth: #2f303a;
+  --color-cards-portfolio: #eee;
+  --color-white: #ffffff;
+  --color-white60: rgba(250, 255, 255, 0.6);
+  --color-white10: rgba(250, 255, 255, 0.1);
+  --color-overlay: rgba(47, 48, 58, 0.4);
+  --color-card-overlay: rgba(33, 150, 243, 0.9);
+  --color-current: currentColor;
+  --color-inactive-icon: #afb1b8;
+  --color-bg-specialization: rgba(47, 48, 58, 0.8);
+  --color-input-outline: rgba(0, 0, 0, 0.1);
+
+  --color-modal-overlay: rgba(0, 0, 0, 0.2);
+
+  /* Переменные цветов активности */
+  --color-active: #2196f3;
+  --color-active-button: #188ce8;
+
+  /* Шрифты */
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* ЭФФЕКТЫ */
+  --transition-time: 250ms;
+  --transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Тень для кнопок */
+  --button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}

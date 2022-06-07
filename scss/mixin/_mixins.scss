@@ -1,0 +1,49 @@
+// @import './flexAlign';
+// @import './transitions';
+// @import './fontSize';
+
+@mixin flexAlign($type: flex, $align: center, $justify: center) {
+  display: $type;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin projTransitions($property) {
+  transition-property: $property;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--transition-function);
+}
+
+@mixin font($fontSize: 14, $lineHeight: 16, $fontWeight: 400, $letterSpacing: 0.06) {
+  font-size: #{$fontSize}px;
+  line-height: calc(#{$lineHeight} / #{$fontSize});
+  font-weight: $fontWeight;
+  letter-spacing: #{$letterSpacing}em;
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin pixelRatio {
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}

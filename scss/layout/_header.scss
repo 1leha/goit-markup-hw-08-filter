@@ -1,0 +1,172 @@
+.header {
+  border-bottom: 1px solid #ececec;
+  // display: none;
+}
+
+.header__container {
+  position: relative;
+
+  @include tablet {
+    @include flexAlign();
+    justify-content: flex-start;
+  }
+  @include desktop {
+    @include flexAlign();
+  }
+}
+
+.navigation {
+  @include tablet {
+    @include flexAlign($justify: flex-start);
+    flex: 1 1 auto;
+  }
+  @include desktop {
+    @include flexAlign($justify: flex-start);
+  }
+}
+
+.header__header-contacts {
+  @include tablet {
+    @include flexAlign();
+    // flex-direction: column;
+  }
+  @include desktop {
+    @include flexAlign();
+  }
+}
+
+.header__logo {
+  @include font(24, 28, 700, 0.03);
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include desktop {
+    @include font(26, 31, 700, 0.03);
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+/* *Стили для меню */
+.header__menu {
+  margin-bottom: 64px;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+  @include desktop {
+    margin-bottom: 0;
+  }
+  // display: none;
+}
+
+/* *Стили для контактов */
+.header-contacts {
+  // margin-left: 300px;
+  @include flexAlign($align: flex-start);
+  flex-direction: column-reverse;
+  margin-top: auto;
+  margin-bottom: 64px;
+
+  @include tablet {
+    @include flexAlign($align: flex-start, $justify: center);
+    justify-content: center;
+    margin-left: auto;
+    margin-top: 0;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  @include desktop {
+    @include flexAlign($align: flex-start);
+    margin-left: auto;
+    margin-top: 0;
+    flex-direction: row;
+    margin-bottom: 0px;
+  }
+}
+
+.header-contacts__item {
+  &:last-child {
+    margin-bottom: 32px;
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  @include tablet {
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
+  }
+  @include desktop {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.header-contacts__icon {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+  }
+  @include desktop {
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.header-contacts__link {
+  &--mobiled {
+    @include font(34, 40, 500, 0.02);
+    color: var(--color-active);
+  }
+  @include font(24, 28, 500, 0.02);
+
+  color: var(--color-secondary);
+
+  @include projTransitions(color);
+
+  /* События контактов */
+  &:hover,
+  &:focus {
+    color: var(--color-active);
+  }
+
+  @include tablet {
+    @include flexAlign($align: center);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include font(12, 14, 500, 0.02);
+
+    color: var(--color-secondary);
+  }
+  @include desktop {
+    @include flexAlign($align: center);
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include font(14, 16, 500, 0.02);
+  }
+}

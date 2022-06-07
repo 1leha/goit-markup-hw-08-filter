@@ -1,0 +1,56 @@
+/* *Стили для "Особенности" */
+.peculiarities {
+  @include tablet {
+    @include flexAlign($align: start, $justify: space-between);
+    flex-wrap: wrap;
+  }
+}
+
+.peculiarities__item {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+    flex-basis: calc((768px - 60px) / 2);
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include desktop {
+    flex-basis: calc((1200px - 120px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.peculiarities__thumb {
+  height: 120px;
+  margin-bottom: 30px;
+  @include flexAlign();
+
+  background-color: var(--color-third);
+
+  border-radius: 4px;
+}
+
+.peculiarities__title {
+  margin-bottom: 10px;
+
+  @include font(14, 16, 700, 0.03);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.peculiarities__text {
+  @include font(14, 24, 400, 0.03);
+
+  color: var(--color-secondary);
+}

@@ -1,0 +1,45 @@
+/* *Стили для меню */
+.menu {
+  @include flexAlign();
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.menu__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--color-primary);
+
+  @include projTransitions(color);
+
+  &:hover,
+  &:focus {
+    color: var(--color-active);
+  }
+
+  &--active {
+    color: var(--color-active);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      top: 100%;
+      left: 0;
+      transform: translateY(calc(-100% + 1px));
+      border-radius: 2px;
+      background-color: var(--color-active);
+    }
+  }
+}

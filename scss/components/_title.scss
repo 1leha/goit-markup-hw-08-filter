@@ -1,0 +1,14 @@
+/* *Стили для заголовков */
+.section__title {
+  margin-bottom: 30px;
+
+  @include font(28, 33, 700, 0.03);
+  text-align: center;
+
+  @include desktop {
+    margin-bottom: 50px;
+
+    @include font(36, 42, 700, 0.03);
+    text-align: center;
+  }
+}
