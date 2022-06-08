@@ -108,6 +108,8 @@
                   type="radio"
                   name="filter"
                   aria-label="Все"
+                  data-cathegory="all"
+                  checked
                 />
                 <span class="filter-label__radio-custom button">Все</span>
               </label>
@@ -120,6 +122,7 @@
                   type="radio"
                   name="filter"
                   aria-label="Веб-сайты"
+                  data-cathegory="web"
                 />
                 <span class="filter-label__radio-custom button">Веб-сайты</span>
               </label>
@@ -132,6 +135,7 @@
                   type="radio"
                   name="filter"
                   aria-label="Приложения"
+                  data-cathegory="app"
                 />
                 <span class="filter-label__radio-custom button">Приложения</span>
               </label>
@@ -144,6 +148,7 @@
                   type="radio"
                   name="filter"
                   aria-label="Дизайн"
+                  data-cathegory="design"
                 />
                 <span class="filter-label__radio-custom button">Дизайн</span>
               </label>
@@ -156,6 +161,7 @@
                   type="radio"
                   name="filter"
                   aria-label="Маркетинг"
+                  data-cathegory="marketing"
                 />
                 <span class="filter-label__radio-custom button">Маркетинг</span>
               </label>
@@ -163,7 +169,7 @@
           </ul>
 
           <ul class="portfolio">
-            <li class="portfolio__item">
+            <!-- <li class="portfolio__item">
               <a href="" class="card">
                 <div class="card__thumb">
                   <div class="card__overlay">
@@ -532,7 +538,8 @@
                       "
                       media="(min-width: 320px)"
                     />
-                    <img src="./img/portfolio/pfolio-img-8-450px.jpg" alt="Проект LAB. Маркетинг" />
+                    <img src="./img/portfolio/pfolio-img-8-450px.jpg" 
+                    alt="Проект LAB. Маркетинг" />
                   </picture>
                 </div>
                 <div class="card__content">
@@ -589,6 +596,7 @@
                 </div>
               </a>
             </li>
+             -->
           </ul>
         </div>
       </section>
@@ -670,6 +678,7 @@
         </div>
       </div>
     </footer>
-    <script src="./js/mob-menu.js"></script>
+    <script src="./js/mob-menu.js" type="module"></script>
+    <script src="./js/portfolio.js" type="module"></script>
   </body>
 </html>
