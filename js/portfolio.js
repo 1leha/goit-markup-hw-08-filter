@@ -1,7 +1,6 @@
 import cards from './portfolio-data.js';
 
 const refs = {
-  //   filterButtons: document.querySelectorAll('.filter-label__radio-original'),
   rbAll: document.querySelector('[data-cathegory="all"]'),
   rbWeb: document.querySelector('[data-cathegory="web"]'),
   rbApp: document.querySelector('[data-cathegory="app"]'),
@@ -10,32 +9,31 @@ const refs = {
   filterButtonsUl: document.querySelector('.filter'),
   portfolioContainer: document.querySelector('.portfolio'),
 };
-let filteredCards;
-// console.log(cards);
-window.onload = e => {
+
+onload = e => {
   cardMaker(cards);
 };
 
 refs.filterButtonsUl.addEventListener('click', e => {
-  //   console.log(e.target === refs.rbWeb);
-  switch (e.target) {
+  // console.log(e.target.dataset.cathegory);
+  switch (e.target.dataset.cathegory) {
     case refs.rbAll:
       cardMaker(cards);
       break;
 
-    case refs.rbWeb:
+    case 'web':
       cardMaker(cards.filter(({ cardCathegory }) => cardCathegory === 'web'));
       break;
 
-    case refs.rbApp:
+    case 'app':
       cardMaker(cards.filter(({ cardCathegory }) => cardCathegory === 'app'));
       break;
 
-    case refs.rbDesign:
+    case 'design':
       cardMaker(cards.filter(({ cardCathegory }) => cardCathegory === 'design'));
       break;
 
-    case refs.rbMarketing:
+    case 'marketing':
       cardMaker(cards.filter(({ cardCathegory }) => cardCathegory === 'marketing'));
       break;
 
